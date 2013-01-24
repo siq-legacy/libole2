@@ -1,0 +1,22 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:750: checking for a BSD compatible install
+configure:803: checking whether build environment is sane
+configure:860: checking whether make sets ${MAKE}
+configure:906: checking for working aclocal
+configure:919: checking for working autoconf
+configure:932: checking for working automake
+configure:945: checking for working autoheader
+configure:958: checking for working makeinfo
+configure:972: checking whether to enable maintainer-specific portions of Makefiles
+configure:998: checking for gcc
+configure:1111: checking whether the C compiler (gcc -m=32 ) works
+configure:1127: gcc -o conftest -m=32   conftest.c  1>&5
+cc1: error: unrecognized command line option "-m=32"
+configure: failed program was:
+
+#line 1122 "configure"
+#include "confdefs.h"
+
+main(){return(0);}

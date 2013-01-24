@@ -1,0 +1,77 @@
+
+    By the consent of its authors, Libole2 v 2.2.8 is now dually-licensed
+    under the GPL and the Lesser General Public License (LGPL V2), which
+    permits commercial distribution for a fee.
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License or the Lesser
+    General License as published by the Free Software Foundation; either
+    version 2 of the License.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License or Lesser General Public License
+    for more details.
+
+    You should have received a copy of the GNU General Public License
+    and Lesser General Public License along with this program; if not,
+    write to the Free Software Foundation, Inc.,
+    59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-- 
+
+NOTE : Jan 23 02
+    The libole2 module has now branched.
+    HEAD      : is used for new development and depends on GNOME2
+    gnome_1_4 : depends on the GNOME_1_4 platform
+
+    The Gnumeric development team has inherited the maintainership.
+    Please send comments, queries and patches to
+	gnumeric-list@gnome.org
+
+-- 
+This code was written with grateful thanks to:
+
+	Martin Schwartz - Author of Laola, father of free OLE2
+	
+Much useful information will be gleaned from the work on wine by.
+
+	Marcus Meissner, Francis Beaudet, Sylvain St-Germain
+and Thuy Nguyen
+
+	The code breaks fairly cleanly into two seperate pieces,
+firstly the raw block API whether small or large, and 2ndly the FILE *
+style wrapper on top of the block API. Since there are two types of
+block, there are two functions per percieved method that are accessed
+via the stream's function pointer. This has a lot of good performance
+characteristics, despite the percieved overhead of a 'virtual' call.
+The exception to this being ms_ole_lseek which is non-staticly linked
+for homogeneity.
+
+	Further thanks for the summary information code go to
+
+	Caolan McNamara - Heroic coding ledgend.
+
+	for his port of the Somar Software freeware DLL functions to get 
+summary info from OLE 2.0 document files, named CPPSUM available from
+the Somar Software WWW site at http://www.somar.com.
+	
+	The summary information code was extensively updated and re -
+written by Frank Chiulli incorporating both DocumentSummaryInformation
+and SummaryInformation streams, and implementing several new types.	
+
+	This code has been written by the following
+people:
+
+	Michael Meeks (michael@helixcode.com)
+	Arturo Tena   (arturo@directmail.org)
+	Frank Chiulli (fc-linux@home.com)
+
+	Any patches should be sent to both Arturo and myself,
+
+
+						Michael Meeks.
+
+Jan 23 02
+NOTE : See note above re new destination for bugs and patches.

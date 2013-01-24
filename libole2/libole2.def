@@ -1,0 +1,14 @@
+LIBRARY "libole2"
+
+EXPORTS
+    ms_ole_init             
+    ms_ole_open_vfs             
+    ms_ole_create_vfs           
+    ms_ole_destroy              
+    ms_ole_directory            
+    ms_ole_stream_open          
+    ms_ole_stream_close         
+    ms_ole_stream_read_copy     
+    ms_ole_stream_write 
+    ms_ole_stat 
+

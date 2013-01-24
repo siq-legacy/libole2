@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Libole2
+Description: a library for reading and writing MS OLE structured files
+Version: 2.2.8
+Requires: glib-2.0
+Libs: -L${libdir} -lgnomeole2
+Cflags: -I${includedir}/libole2-2.0 -m32

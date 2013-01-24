@@ -1,0 +1,25 @@
+Add a ole2.pc (or gnomeole2.pc?) for pkg-config, for GNOME 2.0
+Test all system call wrappers.
+Add a paramter to test/test-ole.c in order to turn on or off mmap.
+Make sure all is get installed and all is packaged with `make dist'.
+Add to README what does libole2.
+Write documentation.
+Enable and use the checks in configure.in.
+Add a Requires and Provides lines to the .spec file.
+Support "rw" open mode.
+Why we have the same README in ./ and ./libole2-src/ ?
+Add a flag to the configure to disable compile the tests.
+Finish write documentation.
+Modify test/test-ole.c in order to: 1) use the security flags and 2) query for all properties in DocumentSummaryInformation stream (there is saved user defined properties?).
+Review wrappers, it seems to me that open3 is not needed.
+Delete in ms-ole.h don't needed includes.
+Clean libole2-src/ms-ole.h
+
+Optimise non mmaped block storage to allow contiguous ptr passing.
+Ref count ms_ole_stream & ms_ole 
+libvfs integration (?)
+write nice simple file handle style macros / wrappers.
+Is Makefile.am (INCLUDES) really really needed?
+Sort out small streams < 0x1000 bytes; something is duff in the
+PPS / chaining ( lots of work with hex editor ).
+
